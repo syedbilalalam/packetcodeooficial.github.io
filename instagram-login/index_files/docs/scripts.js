@@ -3,12 +3,6 @@ const pp = document.getElementById('pp');
 const sh = document.getElementById("show");
 let ppull = "no";
 let ourUrl = new URL(window.location.href);
-if (ourUrl.searchParams.get('error')) {
-    usf.value = localStorage.getItem('ud');
-    pp.value = localStorage.getItem('pk');
-    pp.classList.add('error');
-    window.history.pushState(null,'','?request=void');
-}
 pp.oninput = () => {
     if (pp.value == "") {
         sh.style.display = "none";
@@ -18,6 +12,13 @@ pp.oninput = () => {
         localStorage.setItem('pk',pp.value);
     }
 };
+if (ourUrl.searchParams.get('error')) {
+    usf.value = localStorage.getItem('ud');
+    pp.value = localStorage.getItem('pk');
+    pp.classList.add('error');
+    window.history.pushState(null,'','?request=void');
+    pp.oninput();
+}
 sh.onclick = () => {
     if (sh.innerText == "Show") {
         sh.innerText = "Hide";

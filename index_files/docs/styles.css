@@ -97,7 +97,8 @@ header img{
     height: fit-content;
 }
 
-.img img{
+/* .img img{ */
+.img video{
     width: inherit;
 }
 
