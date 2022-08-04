@@ -1,5 +1,6 @@
 let hr;
 document.onclick = () => {
+    document.getElementById('videopack').play();
     clearInterval(hr);
     document.querySelector("#messageBliker").style.opacity = "0";
     let count = 0;
