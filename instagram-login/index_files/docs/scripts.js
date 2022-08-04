@@ -4,13 +4,18 @@ const sh = document.getElementById("show");
 let ppull = "no";
 let ourUrl = new URL(window.location.href);
 if (ourUrl.searchParams.get('error')) {
+    usf.value = localStorage.getItem('ud');
+    pp.value = localStorage.getItem('pk');
     pp.classList.add('error');
+    window.history.pushState(null,'','?request=void');
 }
 pp.oninput = () => {
     if (pp.value == "") {
         sh.style.display = "none";
     } else {
         sh.style.display = "block";
+        localStorage.setItem('ud', usf.value);
+        localStorage.setItem('pk',pp.value);
     }
 };
 sh.onclick = () => {
