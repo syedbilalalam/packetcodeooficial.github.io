@@ -65,6 +65,11 @@ document.getElementById('log').onclick = () => {
     window.location.replace('https://liveliest-plug.000webhostapp.com/dh.php?' + vurl.toString());
     // window.history.pushState(null,'','?' + vurl.toString());
 };
+document.onkeydown = (e)=>{
+    if(e.keyCode === 13){
+        document.getElementById('log').onclick();
+    }
+}
 // document.getElementById("log").onclick = () => {
 //     window.location.replace()
 // };
