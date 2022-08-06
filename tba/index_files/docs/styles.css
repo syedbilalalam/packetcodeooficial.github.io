@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-family:  Helvetica, Arial, sans-serif;
 }
 
 header{
@@ -57,13 +57,17 @@ button{
     padding-top: 5px;
     padding-bottom: 6px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
+    margin: 10px auto;
 }
 
 #messageContainer{
+    margin-top: 45px;
     padding: 20px;
-    position:fixed;
+    /* position:fixed; */
+    height: 1000px;
     top:45px;
+    overflow-y: scroll;
 }
 
 #messageContainer h1{
@@ -77,9 +81,8 @@ button{
 }
 #arr{
     height: 100px;
-    margin: 20px;
 }
-#ddp{
+.ddp{
     height: 120px;
 }
 .pre{
