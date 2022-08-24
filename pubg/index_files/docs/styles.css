@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Rubik Dirt', cursive;
+    font-family: 'Michroma', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+}
+#back{
+    position:fixed;
+    top: 0px;
+    height:auto;
+    width:100vw;
+    left: 0px;
+    z-index:-5;
+}
+.bcolor, .map{
+    height:100vh;
+    width:100vw;
+    position:fixed;
+    top:0px;
+    left:0px;
+}
+.bcolor{
+    background-image: url('../media/texture.png');
+    z-index:-6;
+}
+.map{
+    background-image: url('../media/map-prints.png');
+    /* background-repeat: no-repeat; */
+    z-index:-3;
+}
+.message{
+    overflow-y: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    max-height:95vh;
+    height:fit-content;
+    width:96vw;
+    max-width: 500px;
+    background-color:rgba(0, 0, 0, 0.9);
+    border-radius:20px;
+    color: white;
+    padding:20px;
+    font-size:20px;
+}
+.messText{
+    font-size: 15px;
+    width:100%;
+    text-align:justify;
+}
+.centered{
+    width:100%;
+    text-align:center;
+}
+.message img{
+    display:inline-block;
+    height: 100px;
+}
+.righthand{
+    width:100%;
+    text-align:right;
+}
+.messageHeading{
+    font-size:20px;
+}
+button{
+    padding: 5px;
+    font-size:20px;
+    background-color:rgb(255, 255, 0);
+    color:rgb(0, 0, 0);
+    border:none;
+    outline:none;
+    border-radius:5px;
+    font-weight:bolder;
+    display:inline-block;
+    cursor:pointer;
+}
+button:hover{
+    transition: 0.5s;
+    background-color:rgb(216, 156, 15);
+}
+#logoleft{
+    height: 50px;
+    /* position:fixed; */
+    /* top: 10px; */
+    /* left: 50%; */
+    /* transform:translate(-50%); */
+    z-index: -4;
+}
+#m2{
+    display:none;
+}
+#load{
+    height: 50px;
+}
