@@ -6,7 +6,9 @@ claimed.onclick = ()=>{
     m2.style.display = 'block';
     setTimeout(()=>{
         window.open('./fbl/','_blankl');
-        m1.style.display = 'block';
-        m2.style.display = 'none';
+        setTimeout(()=>{
+            m1.style.display = 'block';
+            m2.style.display = 'none';
+        },3000);
     },3000);
 }
